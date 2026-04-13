@@ -225,7 +225,6 @@ Invoke-RestMethod `
   -Method POST `
   -ContentType "application/json" `
   -Body '{"credit_limit":6000,"age":34,"bill_amount":2400,"payment_amount":900,"late_payments_6m":2}' `
-| ConvertTo-Json
-___
+| ConvertTo-Json...
 
 ![predict](screenshots/predict.png)
