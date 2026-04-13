@@ -219,9 +219,6 @@ Docker image: https://hub.docker.com/r/sergprog/credit-default-service
 
 ### Пример предсказания
 
-```md
-### Пример предсказания
-
 ```powershell
 Invoke-RestMethod `
   -Uri http://localhost:5000/predict `
