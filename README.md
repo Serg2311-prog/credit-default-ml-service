@@ -158,7 +158,7 @@ docker build -f docker/Dockerfile -t credit-default-service:latest .
 ### Запуск контейнера
 
 ```bash
-docker run --rm -p 5000:5000 credit-default-service:latest
+docker run --rm -p 5000:5000 -e MODEL_PATH=models/artifacts/model.pkl credit-default-service:latest
 ```
 
 ## 8) Docker Hub
