@@ -209,7 +209,7 @@ Docker image: https://hub.docker.com/r/sergprog/credit-default-service
 - ожидаемое снижение потерь от дефолтов (expected loss reduction)
 - доля одобренных заявок при фиксированном уровне риска (approval rate at fixed risk)
   
-##  Демонстрация работы
+## 13) Демонстрация работы
 
 ![docker](screenshots/Dockerdesktop.png)
 ![health](screenshots/health.png)
