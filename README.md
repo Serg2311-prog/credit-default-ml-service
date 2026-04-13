@@ -55,6 +55,13 @@ python models/train.py
 - `models/artifacts/model.pkl`
 - `models/artifacts/metadata.json` (версия и метрики)
 
+### Загрузка данных
+
+```bash
+python download_data.py
+python models/train.py
+```
+
 ## 3) Flask API
 
 ### Эндпоинты
@@ -79,10 +86,27 @@ python models/train.py
 }
 ```
 
+### Пример ответа API (/predict)
+
+```json
+{
+  "prediction": 0,
+  "probability": 0.27,
+  "model_version": "v1"
+}
+```
+
 ### Локальный запуск API
 
 ```bash
 export MODEL_PATH=models/artifacts/model.pkl
+flask --app app.api run --host 0.0.0.0 --port 5000
+```
+
+### Запуск на Windows (PowerShell)
+
+```powershell
+$env:MODEL_PATH="models/artifacts/model.pkl"
 flask --app app.api run --host 0.0.0.0 --port 5000
 ```
 
@@ -129,6 +153,10 @@ docker build -f docker/Dockerfile -t credit-default-service:latest .
 docker run --rm -p 5000:5000 credit-default-service:latest
 ```
 
+### Docker Hub
+
+Docker image: `<your-dockerhub-link>`
+
 ## 6) Архитектурное решение: монолит vs микросервисы
 
 ### Текущий выбор: **монолит**
@@ -167,3 +195,8 @@ docker run --rm -p 5000:5000 credit-default-service:latest
 ## 8) A/B тестирование
 
 Подробный план в файле: **`ab_test_plan.md`**.
+
+### Бизнес-метрики
+
+- снижение ожидаемых потерь (expected loss reduction)
+- доля одобренных заявок при фиксированном уровне риска (approval rate at fixed risk)
