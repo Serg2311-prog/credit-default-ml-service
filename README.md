@@ -211,6 +211,11 @@ Docker image: https://hub.docker.com/r/sergprog/credit-default-service
   
 ## 13) Демонстрация работы
 
+### Docker контейнер
 ![docker](screenshots/Dockerdesktop.png)
+
+### Проверка health endpoint
 ![health](screenshots/health.png)
+
+### Пример предсказания
 ![predict](screenshots/predict.png)
