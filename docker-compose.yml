@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  api:
+    image: sergprog/credit-default-service:latest
+    container_name: credit-default-api
+    ports:
+      - "5000:5000"
+    environment:
+      - MODEL_PATH=models/artifacts/model.pkl
