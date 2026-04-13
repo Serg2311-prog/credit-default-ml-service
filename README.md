@@ -157,7 +157,7 @@ docker run --rm -p 5000:5000 credit-default-service:latest
 
 ## 8) Docker Hub
 
-Docker image: <добавить ссылку после публикации>
+Docker image:](https://hub.docker.com/r/sergprog/credit-default-service)
 
 ## 9) Архитектурное решение: монолит vs микросервисы
 
