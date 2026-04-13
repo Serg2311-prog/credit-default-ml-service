@@ -218,6 +218,7 @@ Docker image: https://hub.docker.com/r/sergprog/credit-default-service
 ![health](screenshots/health.png)
 
 ### Пример предсказания
+
 Invoke-RestMethod `
   -Uri http://localhost:5000/predict `
   -Method POST `
