@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   api:
     image: sergprog/credit-default-service:latest
